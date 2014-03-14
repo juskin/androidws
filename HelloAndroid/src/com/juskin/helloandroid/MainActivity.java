@@ -3,9 +3,11 @@ package com.juskin.helloandroid;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Bundle;
+//import android.provider.Settings.System;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+
 //import android.widget.TextView;
 
 public class MainActivity extends Activity {
@@ -13,7 +15,7 @@ public class MainActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.hello_world);
+		setContentView(R.layout.mainactivity);
 
 		Button button = (Button) findViewById(R.id.Button01);
 		button.setOnClickListener(new OnClickListener() {
@@ -25,9 +27,10 @@ public class MainActivity extends Activity {
 
 	private void openDialog() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setTitle("提示窗口");
-		builder.setMessage("这是一个提示窗口。");
+		builder.setTitle("弹出窗口");
+		builder.setMessage("你点击按钮后弹出一个窗口。");
 		builder.setNegativeButton("Exit", null);
 		builder.show();
 	}
+
 }
