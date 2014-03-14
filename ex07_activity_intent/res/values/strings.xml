@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="hello">Hello World, ActivitySwitch</string>
     <string name="app_name">TestActivity</string>
+    <string name="button1">这是button1</string>
+    <string name="button2">这是button2</string>
+    <string name="button3">这是button3</string>
+    <string name="button4">这是button4</string>
+
 </resources>

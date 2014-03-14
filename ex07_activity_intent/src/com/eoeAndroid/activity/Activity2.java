@@ -7,7 +7,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class Activity2 extends Activity {
-	OnClickListener listener = null;
+	OnClickListener listener2 = null;
 	Button button;
 
 	/** Called when the activity is first created. */
@@ -15,13 +15,13 @@ public class Activity2 extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity2);
-		listener = new OnClickListener() {
+		listener2 = new OnClickListener() {
 			public void onClick(View v) {
 				finish();
 			}
 		};
 		button = (Button) findViewById(R.id.button4);
-		button.setOnClickListener(listener);
+		button.setOnClickListener(listener2);
 		setTitle("现在是在Activity2里");
 	}
 }
