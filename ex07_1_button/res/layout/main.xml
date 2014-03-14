@@ -5,7 +5,7 @@
     android:orientation="vertical" >
 
     <EditText
-        android:id="@+id/speed"
+        android:id="@+id/strtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dip"
@@ -13,18 +13,18 @@
         android:ems="25"
         android:maxLines="1"
         android:scrollHorizontally="true"
-        android:text="这是编辑框" />
+        android:text="@string/strtext" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="这是button1" />
+        android:text="@string/button1" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="这是button2" />
+        android:text="@string/button2" />
 
 </LinearLayout>

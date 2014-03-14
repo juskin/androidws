@@ -3,5 +3,8 @@
 
     <string name="hello">Hello World, button</string>
     <string name="app_name">TestButton</string>
+    <string name="strtext">这是编辑框</string>
+    <string name="button1">这是button1</string>
+    <string name="button2">这是button2</string>
 
 </resources>
