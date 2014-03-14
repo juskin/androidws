@@ -12,23 +12,25 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+
 /**
  * 纯文本浏览器
+ * 
  * @author Administrator
- *
+ * 
  */
 public class TxtReader extends Activity {
-    /** Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-       
-        Button fileOpenBtn = (Button)findViewById(R.id.openFIleBtn);
-        fileOpenBtn.setOnClickListener(new OpenFileAction());
+	/** Called when the activity is first created. */
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
 
-    }
-    
+		Button fileOpenBtn = (Button) findViewById(R.id.openFIleBtn);
+		fileOpenBtn.setOnClickListener(new OpenFileAction());
+
+	}
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = this.getMenuInflater();
@@ -37,7 +39,6 @@ public class TxtReader extends Activity {
 		menu.removeItem(R.id.utf8);
 		return true;
 	}
-
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -50,11 +51,12 @@ public class TxtReader extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	
-	//弹出关于框
+
+	// 弹出关于框
 	private void doAbout() {
-		Dialog dialog = new AlertDialog.Builder(TxtReader.this).setTitle(
-				R.string.aboutTitle).setMessage(R.string.aboutInfo)
+		Dialog dialog = new AlertDialog.Builder(TxtReader.this)
+				.setTitle(R.string.aboutTitle)
+				.setMessage(R.string.aboutInfo)
 				.setPositiveButton(R.string.aboutOK,
 						new DialogInterface.OnClickListener() {
 							public void onClick(
@@ -64,22 +66,19 @@ public class TxtReader extends Activity {
 						}).create();
 		dialog.show();
 	}
-	
-    @Override
+
+	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 	}
 
-
-
-	class OpenFileAction implements OnClickListener
-    {
+	class OpenFileAction implements OnClickListener {
 
 		public void onClick(View v) {
-			
+
 			Intent in = new Intent(TxtReader.this, ListAllFileActivity.class);
-        	startActivityForResult(in, 0);
+			startActivityForResult(in, 0);
 		}
-    	
-    }
+
+	}
 }
